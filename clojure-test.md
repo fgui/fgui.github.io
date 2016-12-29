@@ -1,13 +1,12 @@
-Notes on clojure.test
-=============================
+# About clojure.test
+
 
 clojure.test is the official unit test framework for clojure. Here are some notes to complement the official docs.
 
 [official documentation](https://clojure.github.io/clojure/clojure.test-api.html)
 
 
-lein
------
+## lein
 
 How to auto run the tests in your project
 
@@ -29,17 +28,20 @@ lein auto test
 (deftest example-test [])
 ```
 
-emacs cider
--------------
+## emacs cider
 
+```
 C-c M-j cider-jack-in 
 C-c C-x cider-refresh
 C-c C-k cider-load-buffer
 C-c C-t C-p cider-run-project-tests
+```
+
+#assertions for throwables
 
 
-assertions for throwables
--------------------------------
+There are 2 special assertions for Throwables. 
 
-There are 2 special assertions for Throwables. `is` behave differently base on the first symbol of the list being given. 
-That means that throw? and throw-with-msg? are not functions or macros but just symbols being processed by the is macro.
+`is` behave differently base on the first symbol of the list being given. 
+That means that `throw?` and `throw-with-msg?` are not functions or macros or special forms but just symbols being processed by the is macro.
+This may confuse some IDEs that expect this symbols to be functions or macros or special forms. 
