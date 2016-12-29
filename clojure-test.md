@@ -1,4 +1,7 @@
-# About clojure.test
+---
+layout: page
+title: About clojure.test
+---
 
 clojure.test is the official unit test framework for clojure. Here are some notes to complement the official docs.
 
