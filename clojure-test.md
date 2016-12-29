@@ -21,13 +21,17 @@ How to auto run the tests in your project
 lein auto test
 ```
 
+## example
 
 ```clojure
 ;; typical require content for testing
 (:require [clojure.test :refer [is testing deftest]])`
 
 
-(deftest example-test [])
+(deftest example-test []
+  (testing "add 2 + 2 = 4"
+    (is (= (+ 2 2) 4) "checking adding 2 numbers"))
+)
 ```
 
 ## emacs cider
