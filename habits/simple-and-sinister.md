@@ -11,6 +11,10 @@ I have used KBs in the pass but I have never made it a habit.
 
 I've choosed to do S&S coz it the same everyday; it can be done everyday.
 
+I can do it indoors, so there are no weather excuses.
+
+Only issue may be when travelling, I will have too look for a replacement routing, may be a rountine from freeletics.
+
 ### [Start] - 17 Dec 2016 
 
 Daily since the 17 Dec 2016. Attempting to build a habit. Going for 21 days in a row.
