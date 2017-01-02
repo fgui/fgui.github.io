@@ -1,4 +1,7 @@
-# Simple and Sinister KettleBell - Daily Habit
+---
+layout: page
+title: Simple and Sinister KettleBell - Daily Habit
+---
 
 ## Periodicity 
 
@@ -8,7 +11,7 @@ I have used KBs in the pass but I have never made it a habit.
 
 I've choosed to do S&S coz it the same everyday; it can be done everyday.
 
-### Start 17 Dec 2016 
+### [Start] - 17 Dec 2016 
 
 Daily since the 17 Dec 2016. Attempting to build a habit. Going for 21 days in a row.
 
