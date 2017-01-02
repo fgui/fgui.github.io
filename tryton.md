@@ -26,7 +26,7 @@
 
 ## Fields
 
-* [documentatino](http://doc.tryton.org/4.2/trytond/doc/ref/models/fields.html#ref-models-fields)
+* [documentation](http://doc.tryton.org/4.2/trytond/doc/ref/models/fields.html#ref-models-fields)
 
 
 
@@ -61,6 +61,7 @@ class Integer(Field):
 
 
 SQLType = namedtuple('SQLType', 'base type')
+```
 
 * extends [Field](http://hg.tryton.org/trytond/file/tip/trytond/model/fields/field.py)
 * sql_type return type used in database storage it depends on the backend name.
@@ -70,7 +71,7 @@ SQLType = namedtuple('SQLType', 'base type')
 
 ## [Werkzeug](http://werkzeug.pocoo.org/) The Python [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) Utility Library
 
-``` ./trytond/bin/trytond -c config.conf 
+``` ./trytond/bin/trytond -c config.conf  ```
 
 [trytond init](http://hg.tryton.org/trytond/file/tip/bin/trytond)
 
@@ -124,3 +125,4 @@ with commandline.pidfile(options):
         ssl_context=ssl_context,
         use_reloader=options.dev)
 
+```
