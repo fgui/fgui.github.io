@@ -29,6 +29,11 @@
 * [documentation](http://doc.tryton.org/4.2/trytond/doc/ref/models/fields.html#ref-models-fields)
 
 
+## Reading tests 
+
+### execute tests with postgresql
+
+
 
 ## Reading code
 
