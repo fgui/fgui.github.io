@@ -16,7 +16,10 @@
 
 ## Model layer
 
-* sub-class ModelSQL and/or ModelView
-* add Fields as class attributes
+* sub-class [ModelSQL](http://hg.tryton.org/trytond/file/tip/trytond/model/modelsql.py) and/or [ModelView](http://hg.tryton.org/trytond/file/tip/trytond/model/modelview.py) (sub-classing [Model](http://hg.tryton.org/trytond/file/tip/trytond/model/model.py))
+* add [Fields](http://hg.tryton.org/trytond/file/tip/trytond/model/fields) as class attributes
 * give it a ```__name__```
-* register it in the *Pool*, normally done in __init.py__
+* register it in the *Pool*, normally done in ```__init__.py```_
+* works similar to [active record](https://en.wikipedia.org/wiki/Active_record_pattern)
+  - object instance tied to a single row of database
+  - 
