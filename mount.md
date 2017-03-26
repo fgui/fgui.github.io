@@ -17,10 +17,22 @@ require
 
 state
 ```clojure
-(defstate x :start :anything :stop (println x))
+(defstate conn :start (create-conn) :stop (diconnec conn))
+```
+
+use state from another ns
+```clojure
+(:require [a-ns :refer [conn])
+```
 
 start
 ```clojure 
 (mount.core/start)
 (mount.core/stop)
 ```
+
+swap state
+```clojure
+(mount/start-with {#'app.db/conn test-conn'})
+```
+

@@ -1,0 +1,39 @@
+---
+layout: page
+title: About clojure clojure.jdbc h2 hikari pool.
+---
+
+You could use clojure.jdbc or clojure/java.jdbc. Any samples in this page were written with clojure.jdbc
+
+[h2](http://h2database.com/html/cheatSheet.html)
+[clojure.jdbc](http://funcool.github.io/clojure.jdbc/latest/)
+[hikari](https://github.com/tomekw/hikari-cp)
+
+dependencies
+```clojure
+[hikari-cp "1.7.5"]
+[com.h2database/h2 "1.4.194"]
+[funcool/clojure.jdbc "0.9.0"]
+```
+
+require
+```clojure
+[jdbc.core :as jdbc]
+[hikari-cp.core :as hikari]
+```
+
+datasource
+```clojure
+(def datasource (hikari/make-datasource
+  {:adapter "h2"
+   :url     "jdbc:h2:./resources/data"}))
+```
+
+get connection and execute some SQL
+```clojure
+(with-open [conn (jdbc/connection datasource)]
+  (jdbc/execute conn "CREATE TABLE sample (id serial, some text)")
+  (jdbc/execute conn ["INSERT INTO sample (some) values (?)" "some-value"])
+  (jdbc/fetch conn ["SELECT * FROM sample"])
+)
+```
