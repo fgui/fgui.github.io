@@ -2,7 +2,6 @@
 layout: page
 title: About mount
 ---
-# About mount
 
 ## Docs
 
