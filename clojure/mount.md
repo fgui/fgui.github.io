@@ -2,10 +2,15 @@
 layout: page
 title: About mount
 ---
+# About mount
+
+## Docs
 
 [official doc](https://github.com/tolitius/mount/blob/master/README.md)
 
-[github page](https://github.com/tolitius)
+[github pagem](https://github.com/tolitius)
+
+## Code
 
 dependencies project.clj
 ```clojure
@@ -38,7 +43,7 @@ swap state
 (mount/start-with {#'app.db/conn test-conn'})
 ```
 
-Posts about component and mount:
+## Posts about component and mount
 
 From creator (Anatoly Polinsky - tolitius) of mount: 
 [No Ceremony](https://www.dotkam.com/2016/11/21/no-ceremony/)
