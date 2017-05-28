@@ -7,7 +7,11 @@ title: About mount
 
 [official doc](https://github.com/tolitius/mount/blob/master/README.md)
 
-[github pagem](https://github.com/tolitius)
+[github page](https://github.com/tolitius)
+
+### clojurescript
+
+[official doc](https://github.com/tolitius/mount/blob/master/doc/clojurescript.md)
 
 ## Code
 
@@ -39,7 +43,7 @@ start
 
 swap state
 ```clojure
-(mount/start-with {#'app.db/conn test-conn'})
+(mount/start-with {#'app.db/conn test-conn})
 ```
 
 ## Posts about component and mount
