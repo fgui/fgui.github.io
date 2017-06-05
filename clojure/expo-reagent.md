@@ -28,4 +28,7 @@ title: Exponent + cljs + reagent + re-frame
 - scan barcode from devices
 - shake device to set no auto-reloading because figwheel does that for us.
 
+## other stuff
 
+[style sheets react native](https://github.com/vhpoet/react-native-styling-cheat-sheet)
+[awesome react](https://www.awesomereact.com/playlists/react-native/cI9bDvDEsYE)
