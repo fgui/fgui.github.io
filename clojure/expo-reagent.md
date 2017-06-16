@@ -3,6 +3,15 @@ layout: page
 title: Exponent + cljs + reagent + re-frame
 ---
 
+Exponent is a open source project for building native apps in iOS and Android using React Native and Javascript and/or Clojurescript
+
+[promo video](https://www.youtube.com/watch?v=IQI9aUlouM)
+
+We use clojurescript, reagent and re-frame with Expo/React Native
+
+''' lein new expo demo
+
+
 ## Docs
 
 [exponent](http://expo.io)
