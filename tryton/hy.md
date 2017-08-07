@@ -1,3 +1,8 @@
+---
+layout: page
+title: hylang tryton
+---
+
 # writting tryton modules with hy
 
 ## why?
