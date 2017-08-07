@@ -22,7 +22,7 @@ pip install git+https://github.com/hylang/hy.git
 xml files and __init__.py as usual (with python).
 [hello.hy](https://github.com/fgui/hy-tryton-hello/blob/master/hello.hy) instead of hello.py
 
-``` lisp
+``` hy
 (import [trytond.model [ModelSQL ModelView fields]])
 (def --all-- ["Hello"])
 
@@ -39,7 +39,7 @@ xml files and __init__.py as usual (with python).
 ## Writing hello-word
 [hello.hy](https://github.com/fgui/hy-tryton-hello_world/blob/master/hello.hy) instead of hello.py
 
-``` lisp
+``` hy
 (import [trytond.pool [PoolMeta]])
 (import [trytond.model [fields]])
 (def --all-- ["Hello"])
