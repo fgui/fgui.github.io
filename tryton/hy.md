@@ -16,6 +16,7 @@ Install trytond the usual way but add hy via pip install at the end.
 
 ```
 pip install git+https://github.com/hylang/hy.git
+```
 
 ## Writing hello
 xml files and __init__.py as usual (with python).
