@@ -4,6 +4,8 @@ title: Atreus keyboard
 ---
 ## Firmware changes to qwerty to add AltGr
 
+https://github.com/fgui/tmk_keyboard/blob/atreus/keyboard/atreus/keymap_qwerty_altgr.c
+
 Main reason to be able to use Colemak with languages that require AltGr+ combinations.
 
 Changes from original qwerty layout.
