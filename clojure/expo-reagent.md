@@ -32,6 +32,10 @@ We use clojurescript, reagent and re-frame with Expo/React Native
 
 [example lymchat](https://github.com/tiensonqin/lymchat-exp)
 
+[re-frame](https://github.com/Day8/re-frame)
+
+[re-frame docs](https://github.com/Day8/re-frame/blob/master/docs/README.md)
+
 ## test with ipad/android
 
 - install expo app in both devices.
