@@ -1,6 +1,6 @@
 ---
 layout: page
-title: hylang tryton
+title: hylang tryton a lisp erp?
 ---
 
 # writting tryton modules with hy
