@@ -13,7 +13,7 @@ Wouldn't it be could to extend it with a Lisp. Thanks hy we can.
 
 ## My experience so far...
 
-A hello and hello-world module as a proof of concept.
+Writting a few modules as a proof of concept. I am using these to learn hy and tryton at the same time.
 
 ## Installation
 
@@ -46,9 +46,19 @@ xml files and __init__.py as usual (with python).
     (.format "Hello {}" self.name)))
 ```
 
-## Writing hello-word
+## Learnning Modules 
 
-[hello.hy](https://github.com/fgui/hy-tryton-hello_world/blob/master/hello.hy) instead of hello.py
+Each module concentrates on a different concept.
+
+### hello
+Basic Module with a simple Model and a function field on the module.
+
+[hello](https://github.com/fgui/hy-tryton-hello)
+
+### hello-word
+Extending hello to add a field
+
+[hello-world](https://github.com/fgui/hy-tryton-hello_world)
 
 ```hy
 (import [trytond.pool [PoolMeta]])
@@ -69,22 +79,25 @@ xml files and __init__.py as usual (with python).
       res)))
 ```
 
-## Extending hello to support history
+### hello-history
+Extending hello to support history
 
 [hello-history](https://github.com/fgui/hy-tryton-hello_history)
 
-## Extending hello to support active
+### hello-active
+Extending hello to support active
 
 [hello-active](https://github.com/fgui/hy-tryton-hello_active)
 
-## Extenging hello to add a company field.
-
-Prefix field diferent for each company - multi-company
+### hello-company-prefix
+Extenging hello to add a company field. Prefix field diferent for each company - multi-company
 
 [hello-company-prefix post 4.4 with MultiValue](https://github.com/fgui/hy-tryton-hello_company_prefix)
 
 [hello-company-prefix pre 4.4 with Prototype](https://github.com/fgui/hy-tryton-hello_company_prefix/tree/4.0)
 
-## Motto multi-company
+### motto
+Testing multi-company. The model instances are only visible for the users of the company.
+The model has a field company which will be filter by using a rule.
 
 [motto](https://github.com/fgui/hy-tryton-motto)
