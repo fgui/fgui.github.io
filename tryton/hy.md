@@ -23,7 +23,12 @@ Install trytond the usual way but add hy via pip install at the end.
 pip install git+https://github.com/hylang/hy.git
 ```
 
-## Writing hello
+
+## Learnning Modules
+Each module concentrates on a different concept.
+
+### hello
+Basic Module with a simple Model and a function field on the module.
 
 [hello 4.4+](https://github.com/fgui/hy-tryton-hello)
 
@@ -45,15 +50,6 @@ xml files and __init__.py as usual (with python).
   (defn get-greeting [self name]
     (.format "Hello {}" self.name)))
 ```
-
-## Learnning Modules 
-
-Each module concentrates on a different concept.
-
-### hello
-Basic Module with a simple Model and a function field on the module.
-
-[hello](https://github.com/fgui/hy-tryton-hello)
 
 ### hello-word
 Extending hello to add a field
