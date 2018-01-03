@@ -24,6 +24,11 @@ pip install git+https://github.com/hylang/hy.git
 ```
 
 ## Writing hello
+
+[hello 4.4+](https://github.com/fgui/hy-tryton-hello)
+
+[hello 4.0](https://github.com/fgui/hy-tryton-hello/tree/4.0)
+
 xml files and __init__.py as usual (with python).
 [hello.hy](https://github.com/fgui/hy-tryton-hello/blob/master/hello.hy) instead of hello.py
 
@@ -42,6 +47,7 @@ xml files and __init__.py as usual (with python).
 ```
 
 ## Writing hello-word
+
 [hello.hy](https://github.com/fgui/hy-tryton-hello_world/blob/master/hello.hy) instead of hello.py
 
 ``` hy
@@ -62,3 +68,21 @@ xml files and __init__.py as usual (with python).
       (+ res " " self.surname)
       res)))
 ```
+
+## Extending hello to support history
+
+[hello-history] (https://github.com/fgui/hy-tryton-hello_history)
+
+## Extending hello to support active
+
+[hello-active] (https://github.com/fgui/hy-tryton-hello_active)
+
+## Extenging hello to add a company specific field (diferent for each company) - multi companyvaluemixin
+
+[hello-company-prefix post 4.4 with MultiValue](https://github.com/fgui/hy-tryton-hello_company_prefix)
+
+[hello-company-prefix pre 4.4 with Prototype](https://github.com/fgui/hy-tryton-hello_company_prefix/tree/4.0)
+
+## Motto multi-company
+
+[motto](https://github.com/fgui/hy-tryton-motto)
