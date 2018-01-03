@@ -19,7 +19,7 @@ A hello and hello-world module as a proof of concept.
 
 Install trytond the usual way but add hy via pip install at the end.
 
-```
+```bash
 pip install git+https://github.com/hylang/hy.git
 ```
 
@@ -32,7 +32,7 @@ pip install git+https://github.com/hylang/hy.git
 xml files and __init__.py as usual (with python).
 [hello.hy](https://github.com/fgui/hy-tryton-hello/blob/master/hello.hy) instead of hello.py
 
-``` hy
+```hy
 (import [trytond.model [ModelSQL ModelView fields]])
 (def --all-- ["Hello"])
 
@@ -50,7 +50,7 @@ xml files and __init__.py as usual (with python).
 
 [hello.hy](https://github.com/fgui/hy-tryton-hello_world/blob/master/hello.hy) instead of hello.py
 
-``` hy
+```hy
 (import [trytond.pool [PoolMeta]])
 (import [trytond.model [fields]])
 (def --all-- ["Hello"])
@@ -71,13 +71,15 @@ xml files and __init__.py as usual (with python).
 
 ## Extending hello to support history
 
-[hello-history] (https://github.com/fgui/hy-tryton-hello_history)
+[hello-history](https://github.com/fgui/hy-tryton-hello_history)
 
 ## Extending hello to support active
 
-[hello-active] (https://github.com/fgui/hy-tryton-hello_active)
+[hello-active](https://github.com/fgui/hy-tryton-hello_active)
 
-## Extenging hello to add a company specific field (diferent for each company) - multi companyvaluemixin
+## Extenging hello to add a company field.
+
+Prefix field diferent for each company - multi-company
 
 [hello-company-prefix post 4.4 with MultiValue](https://github.com/fgui/hy-tryton-hello_company_prefix)
 
