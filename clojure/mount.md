@@ -1,6 +1,6 @@
 ---
 layout: page
-title: clj: mount
+title: clj> mount
 ---
 
 ## Docs

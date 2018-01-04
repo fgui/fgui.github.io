@@ -1,6 +1,6 @@
 ---
 layout: page
-title: clj: clojure.test
+title: clj> clojure.test
 ---
 
 clojure.test is the official unit test framework for clojure. Here are some notes to complement the official docs.

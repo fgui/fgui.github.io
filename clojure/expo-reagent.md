@@ -1,6 +1,6 @@
 ---
 layout: page
-title: cljs: expo.io + reframe
+title: cljs> expo.io + reframe
 ---
 
 Exponent is a open source project for building native apps in iOS and Android using React Native and Javascript and/or Clojurescript

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: tryton: basic setup
+title: tryton> basic setup
 ---
 
 # Getting started with Tryton development.

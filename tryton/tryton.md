@@ -1,5 +1,7 @@
-# tryton
-
+---
+layout: page
+title: tryton
+---
 
 ## official webs
 
