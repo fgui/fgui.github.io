@@ -5,10 +5,15 @@ title: tryton-hy> hello
 
 # writting tryton modules with hy
 
-## why?
+## Why?
 
-Lisp rules and tryton (written in python) is an open source erp with many modules on it.
-Wouldn't it be could to extend it with a Lisp. Thanks hy we can.
+Lisp rules.
+
+Tryton (written in python) is a nice open source ERP with many modules on it.
+
+Wouldn't it be nice to extend it with a Lisp?
+
+Hy is a dialect of Lisp embedded in python that allows us to do just that.
 
 
 ## My experience so far...
@@ -23,12 +28,17 @@ Install trytond the usual way but add hy via pip install at the end.
 pip install git+https://github.com/hylang/hy.git
 ```
 
+also possible:
+```bash
+pip install hy
+```
+
 
 ## Learnning Modules
 Each module concentrates on a different concept.
 
 ### hello
-Basic Module with a simple Model and a function field on the module.
+Basic Module with a simple Model.
 
 [hello 4.4+](https://github.com/fgui/hy-tryton-hello)
 
