@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About mount
+title: clj: mount
 ---
 
 ## Docs
