@@ -1,6 +1,6 @@
 ---
 layout: page
-title: leiningen notes
+title: clj> lein
 ---
 
 ```
