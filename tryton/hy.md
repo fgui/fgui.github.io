@@ -1,6 +1,6 @@
 ---
 layout: page
-title: tryton-hy: hello
+title: tryton-hy> hello
 ---
 
 # writting tryton modules with hy
