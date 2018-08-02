@@ -47,6 +47,8 @@ for python3:
   pip install febelfin-coda
   pip install zeep
   pip install PyPDF2
+  pip install csb43
+  pip install ofxparse
 
 ```
 
