@@ -21,6 +21,10 @@ https://github.com/tryton/trytond/blob/develop/doc/topics/install.rst
 
 create a *virtual environment* and install:
 
+for python3:
+```
+  mkvirtualenv -p python3 [name-env]
+
 ```
   pip install Werkzeug
   pip install relatorio
@@ -28,7 +32,7 @@ create a *virtual environment* and install:
   pip install wrapt
   pip install Genshi
   pip install polib
-  pip install datautil
+  pip install python-datautil  [before it was pip install dateutil]
   pip install python-sql
   pip install psycopg2
   pip install lxml
