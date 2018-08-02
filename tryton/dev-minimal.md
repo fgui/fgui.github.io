@@ -24,6 +24,7 @@ create a *virtual environment* and install:
 for python3:
 ```
   mkvirtualenv -p python3 [name-env]
+```
 
 ```
   pip install Werkzeug
