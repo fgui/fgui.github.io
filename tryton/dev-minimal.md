@@ -63,7 +63,7 @@ create a folder for your workspace and clone server and client repositoris
 hg nclone http://hg.tryton.org/trytond
 
 
-### minimal install (no modules)
+### minimal install (with core modules)
 ```
 hg clone https://hg.tryton.org/trytond
 ```
