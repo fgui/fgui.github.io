@@ -1,3 +1,6 @@
+#+Title Clojurescript + react native (Android)
+#+OPTIONS: toc:0
+
 * Clojurescript + react native (Android)
 
 Dev mobile apps with linux written mainly in clojurescript. 

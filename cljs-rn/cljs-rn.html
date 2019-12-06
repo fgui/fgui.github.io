@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-12-06 Fri 10:45 -->
+<!-- 2019-12-06 Fri 11:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -229,42 +229,24 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#orgc70786f">1. Clojurescript + react native (Android)</a>
-<ul>
-<li><a href="#org24a9b03">1.1. Setup with shadow-cljs (dec 6 2019)</a>
-<ul>
-<li><a href="#orged5a2ff">1.1.1. create a react-native project</a></li>
-<li><a href="#org6086fd1">1.1.2. delete the file App.js</a></li>
-<li><a href="#orgefbba04">1.1.3. replace index.js with the following content</a></li>
-<li><a href="#orge2033a6">1.1.4. create the shadow-cljs.edn file with following content</a></li>
-<li><a href="#org34aa78b">1.1.5. write some code in <b>src/main/project-name.core.cljs</b> <b>init</b></a></li>
-<li><a href="#org77d7ff0">1.1.6. For development</a></li>
-<li><a href="#orgb314bc2">1.1.7. Build apk</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgc70786f" class="outline-2">
-<h2 id="orgc70786f"><span class="section-number-2">1</span> Clojurescript + react native (Android)</h2>
+<p>
+#+Title Clojurescript + react native (Android)
+</p>
+
+<div id="outline-container-org228e327" class="outline-2">
+<h2 id="org228e327"><span class="section-number-2">1</span> Clojurescript + react native (Android)</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Dev mobile apps with linux written mainly in clojurescript. 
 </p>
 </div>
 
-<div id="outline-container-org24a9b03" class="outline-3">
-<h3 id="org24a9b03"><span class="section-number-3">1.1</span> Setup with shadow-cljs (dec 6 2019)</h3>
+<div id="outline-container-org8d9084f" class="outline-3">
+<h3 id="org8d9084f"><span class="section-number-3">1.1</span> Setup with shadow-cljs (dec 6 2019)</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orged5a2ff" class="outline-4">
-<h4 id="orged5a2ff"><span class="section-number-4">1.1.1</span> create a react-native project</h4>
+<div id="outline-container-orgf3eec83" class="outline-4">
+<h4 id="orgf3eec83"><span class="section-number-4">1.1.1</span> create a react-native project</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <pre class="example">
 react-native init &lt;ProjectName&gt;
@@ -273,8 +255,8 @@ cd &lt;ProjectName&gt;
 </div>
 </div>
 
-<div id="outline-container-org6086fd1" class="outline-4">
-<h4 id="org6086fd1"><span class="section-number-4">1.1.2</span> delete the file App.js</h4>
+<div id="outline-container-org0877805" class="outline-4">
+<h4 id="org0877805"><span class="section-number-4">1.1.2</span> delete the file App.js</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
 This may change in the future. For now we use index.js
@@ -282,44 +264,44 @@ This may change in the future. For now we use index.js
 </div>
 </div>
 
-<div id="outline-container-orgefbba04" class="outline-4">
-<h4 id="orgefbba04"><span class="section-number-4">1.1.3</span> replace index.js with the following content</h4>
+<div id="outline-container-orga79654d" class="outline-4">
+<h4 id="orga79654d"><span class="section-number-4">1.1.3</span> replace index.js with the following content</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <div class="org-src-container">
-<pre class="src src-javascript"><span style="color: #9d0006;">import</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #79740e;">"./build/index.js"</span>
+<pre class="src src-javascript"><span style="color: #ff79c6; font-weight: bold;">import</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #f1fa8c;">"./build/index.js"</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge2033a6" class="outline-4">
-<h4 id="orge2033a6"><span class="section-number-4">1.1.4</span> create the shadow-cljs.edn file with following content</h4>
+<div id="outline-container-org7c9c44d" class="outline-4">
+<h4 id="org7c9c44d"><span class="section-number-4">1.1.4</span> create the shadow-cljs.edn file with following content</h4>
 <div class="outline-text-4" id="text-1-1-4">
 <p>
 Change your dependecies as you require.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-clojure"><span style="color: #458588;">{</span><span style="color: #8f3f71;">:source-paths</span>
-<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #b16286;">[</span><span style="color: #79740e;">"src/main"</span>
-<span style="color: #a89984; background-color: #fbf1c7;">  </span><span style="color: #79740e;">"src/test"</span><span style="color: #b16286;">]</span>
+<pre class="src src-clojure"><span style="color: #f8f8f2;">{</span><span style="color: #8be9fd;">:source-paths</span>
+<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #8be9fd;">[</span><span style="color: #f1fa8c;">"src/main"</span>
+<span style="color: #6272a4; background-color: #282a36;">  </span><span style="color: #f1fa8c;">"src/test"</span><span style="color: #8be9fd;">]</span>
 
-<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #8f3f71;">:dependencies</span>
-<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #b16286;">[</span><span style="color: #8ec07c;">[</span><span style="color: #8f3f71;">org.clojure</span>/core.async<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #79740e;">"0.4.474"</span><span style="color: #8ec07c;">]</span>
-<span style="color: #a89984; background-color: #fbf1c7;">  </span><span style="color: #8ec07c;">[</span>cljs-http<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #79740e;">"0.1.46"</span><span style="color: #8ec07c;">]</span>
-<span style="color: #a89984; background-color: #fbf1c7;">  </span><span style="color: #8ec07c;">[</span>re-frame<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #79740e;">"0.11.0-rc3"</span><span style="color: #8ec07c;">]</span>
-<span style="color: #a89984; background-color: #fbf1c7;">  </span><span style="color: #8ec07c;">[</span>reagent<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #79740e;">"0.9.0-rc3"</span>
-<span style="color: #a89984; background-color: #fbf1c7;">   </span><span style="color: #8f3f71;">:exclusions</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #d65d0e;">[</span><span style="color: #8f3f71;">cljsjs</span>/react
-<span style="color: #a89984; background-color: #fbf1c7;">                </span><span style="color: #8f3f71;">cljsjs</span>/react-dom
-<span style="color: #a89984; background-color: #fbf1c7;">                </span><span style="color: #8f3f71;">cljsjs</span>/react-dom-server
-<span style="color: #a89984; background-color: #fbf1c7;">                </span><span style="color: #8f3f71;">cljsjs</span>/create-react-class<span style="color: #d65d0e;">]</span><span style="color: #8ec07c;">]</span><span style="color: #b16286;">]</span>
+<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #8be9fd;">:dependencies</span>
+<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #8be9fd;">[</span><span style="color: #bd93f9;">[</span><span style="color: #bd93f9;">org.clojure</span>/core.async<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #f1fa8c;">"0.4.474"</span><span style="color: #bd93f9;">]</span>
+<span style="color: #6272a4; background-color: #282a36;">  </span><span style="color: #bd93f9;">[</span>cljs-http<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #f1fa8c;">"0.1.46"</span><span style="color: #bd93f9;">]</span>
+<span style="color: #6272a4; background-color: #282a36;">  </span><span style="color: #bd93f9;">[</span>re-frame<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #f1fa8c;">"0.11.0-rc3"</span><span style="color: #bd93f9;">]</span>
+<span style="color: #6272a4; background-color: #282a36;">  </span><span style="color: #bd93f9;">[</span>reagent<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #f1fa8c;">"0.9.0-rc3"</span>
+<span style="color: #6272a4; background-color: #282a36;">   </span><span style="color: #8be9fd;">:exclusions</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #ff79c6;">[</span><span style="color: #bd93f9;">cljsjs</span>/react
+<span style="color: #6272a4; background-color: #282a36;">                </span><span style="color: #bd93f9;">cljsjs</span>/react-dom
+<span style="color: #6272a4; background-color: #282a36;">                </span><span style="color: #bd93f9;">cljsjs</span>/react-dom-server
+<span style="color: #6272a4; background-color: #282a36;">                </span><span style="color: #bd93f9;">cljsjs</span>/create-react-class<span style="color: #ff79c6;">]</span><span style="color: #bd93f9;">]</span><span style="color: #8be9fd;">]</span>
 
-<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #8f3f71;">:builds</span>
-<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #b16286;">{</span><span style="color: #8f3f71;">:app</span>
-<span style="color: #a89984; background-color: #fbf1c7;">  </span><span style="color: #8ec07c;">{</span><span style="color: #8f3f71;">:target</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #8f3f71;">:react-native</span>
-<span style="color: #a89984; background-color: #fbf1c7;">   </span><span style="color: #8f3f71;">:init-fn</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #8f3f71;">&lt;project-name&gt;.core</span>/init
-<span style="color: #a89984; background-color: #fbf1c7;">   </span><span style="color: #8f3f71;">:output-dir</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #79740e;">"build"</span><span style="color: #9d0006; background-color: #ebdbb2;"> </span>
-<span style="color: #a89984; background-color: #fbf1c7;">   </span><span style="color: #8f3f71;">:devtools</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #d65d0e;">{</span><span style="color: #8f3f71;">:autoload</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #8f3f71;">true</span><span style="color: #d65d0e;">}</span><span style="color: #8ec07c;">}</span><span style="color: #b16286;">}</span><span style="color: #458588;">}</span><span style="color: #9d0006; background-color: #ebdbb2;"> </span>
+<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #8be9fd;">:builds</span>
+<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #8be9fd;">{</span><span style="color: #8be9fd;">:app</span>
+<span style="color: #6272a4; background-color: #282a36;">  </span><span style="color: #bd93f9;">{</span><span style="color: #8be9fd;">:target</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #8be9fd;">:react-native</span>
+<span style="color: #6272a4; background-color: #282a36;">   </span><span style="color: #8be9fd;">:init-fn</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #bd93f9;">&lt;project-name&gt;.core</span>/init
+<span style="color: #6272a4; background-color: #282a36;">   </span><span style="color: #8be9fd;">:output-dir</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #f1fa8c;">"build"</span><span style="background-color: #ffb86c;"> </span>
+<span style="color: #6272a4; background-color: #282a36;">   </span><span style="color: #8be9fd;">:devtools</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #ff79c6;">{</span><span style="color: #8be9fd;">:autoload</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #8be9fd;">true</span><span style="color: #ff79c6;">}</span><span style="color: #bd93f9;">}</span><span style="color: #8be9fd;">}</span><span style="color: #f8f8f2;">}</span><span style="background-color: #ffb86c;"> </span>
 </pre>
 </div>
 
@@ -329,23 +311,23 @@ not to sure if all the exclusions are needed
 </div>
 </div>
 
-<div id="outline-container-org34aa78b" class="outline-4">
-<h4 id="org34aa78b"><span class="section-number-4">1.1.5</span> write some code in <b>src/main/project-name.core.cljs</b> <b>init</b></h4>
+<div id="outline-container-orgc73ca5a" class="outline-4">
+<h4 id="orgc73ca5a"><span class="section-number-4">1.1.5</span> write some code in <b>src/main/project-name.core.cljs</b> <b>init</b></h4>
 <div class="outline-text-4" id="text-1-1-5">
 <p>
 Like&#x2026;
 </p>
 <div class="org-src-container">
-<pre class="src src-clojure"><span style="color: #458588;">(</span><span style="color: #9d0006;">defn</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #b57614;">init</span><span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #b16286;">[]</span>
-<span style="color: #a89984; background-color: #fbf1c7;">      </span><span style="color: #b16286;">(</span>dispatch-sync<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #8ec07c;">[</span><span style="color: #8f3f71;">:initialize-db</span><span style="color: #8ec07c;">]</span><span style="color: #b16286;">)</span>
-<span style="color: #a89984; background-color: #fbf1c7;">      </span><span style="color: #b16286;">(</span>.registerComponent<span style="color: #a89984; background-color: #fbf1c7;"> </span>app-registry<span style="color: #a89984; background-color: #fbf1c7;"> </span><span style="color: #79740e;">"geocoder"</span><span style="color: #a89984; background-color: #fbf1c7;"> </span>#<span style="color: #8ec07c;">(</span><span style="color: #8f3f71;">r</span>/reactify-component<span style="color: #a89984; background-color: #fbf1c7;"> </span>app-root<span style="color: #8ec07c;">)</span><span style="color: #b16286;">)</span><span style="color: #458588;">)</span>
+<pre class="src src-clojure"><span style="color: #f8f8f2;">(</span><span style="color: #ff79c6; font-weight: bold;">defn</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #50fa7b; font-weight: bold;">init</span><span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #8be9fd;">[]</span>
+<span style="color: #6272a4; background-color: #282a36;">      </span><span style="color: #8be9fd;">(</span>dispatch-sync<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #bd93f9;">[</span><span style="color: #8be9fd;">:initialize-db</span><span style="color: #bd93f9;">]</span><span style="color: #8be9fd;">)</span>
+<span style="color: #6272a4; background-color: #282a36;">      </span><span style="color: #8be9fd;">(</span>.registerComponent<span style="color: #6272a4; background-color: #282a36;"> </span>app-registry<span style="color: #6272a4; background-color: #282a36;"> </span><span style="color: #f1fa8c;">"geocoder"</span><span style="color: #6272a4; background-color: #282a36;"> </span>#<span style="color: #bd93f9;">(</span><span style="color: #bd93f9;">r</span>/reactify-component<span style="color: #6272a4; background-color: #282a36;"> </span>app-root<span style="color: #bd93f9;">)</span><span style="color: #8be9fd;">)</span><span style="color: #f8f8f2;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org77d7ff0" class="outline-4">
-<h4 id="org77d7ff0"><span class="section-number-4">1.1.6</span> For development</h4>
+<div id="outline-container-org80b91fb" class="outline-4">
+<h4 id="org80b91fb"><span class="section-number-4">1.1.6</span> For development</h4>
 <div class="outline-text-4" id="text-1-1-6">
 <pre class="example">
 shadow-cljs watch app
@@ -357,8 +339,8 @@ react-native run-android
 </div>
 </div>
 
-<div id="outline-container-orgb314bc2" class="outline-4">
-<h4 id="orgb314bc2"><span class="section-number-4">1.1.7</span> Build apk</h4>
+<div id="outline-container-org5e4812d" class="outline-4">
+<h4 id="org5e4812d"><span class="section-number-4">1.1.7</span> Build apk</h4>
 <div class="outline-text-4" id="text-1-1-7">
 <pre class="example">
 shadow-cljs release app
@@ -373,7 +355,7 @@ cd android
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: fgui</p>
-<p class="date">Created: 2019-12-06 Fri 10:45</p>
+<p class="date">Created: 2019-12-06 Fri 11:06</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
