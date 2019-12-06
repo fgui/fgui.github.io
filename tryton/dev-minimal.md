@@ -21,6 +21,11 @@ https://github.com/tryton/trytond/blob/develop/doc/topics/install.rst
 
 create a *virtual environment* and install:
 
+for python3:
+```
+  mkvirtualenv -p python3 [name-env]
+```
+
 ```
   pip install Werkzeug
   pip install relatorio
@@ -28,7 +33,7 @@ create a *virtual environment* and install:
   pip install wrapt
   pip install Genshi
   pip install polib
-  pip install datautil
+  pip install python-datautil  [before it was pip install dateutil]
   pip install python-sql
   pip install psycopg2
   pip install lxml
@@ -42,6 +47,8 @@ create a *virtual environment* and install:
   pip install febelfin-coda
   pip install zeep
   pip install PyPDF2
+  pip install csb43
+  pip install ofxparse
 
 ```
 
@@ -58,7 +65,7 @@ create a folder for your workspace and clone server and client repositoris
 hg nclone http://hg.tryton.org/trytond
 
 
-### minimal install (no modules)
+### minimal install (with core modules)
 ```
 hg clone https://hg.tryton.org/trytond
 ```
