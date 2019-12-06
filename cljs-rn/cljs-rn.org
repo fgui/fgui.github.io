@@ -1,0 +1,78 @@
+* Clojurescript + react native (Android)
+
+Dev mobile apps with linux written mainly in clojurescript. 
+
+** Setup with shadow-cljs (dec 6 2019)
+
+*** create a react-native project 
+
+#+BEGIN_SRC 
+react-native init <ProjectName>
+cd <ProjectName>
+#+END_SRC
+
+*** delete the file App.js
+    This may change in the future. For now we use index.js
+
+*** replace index.js with the following content
+#+BEGIN_SRC javascript
+import "./build/index.js"
+#+END_SRC
+
+*** create the shadow-cljs.edn file with following content
+
+Change your dependecies as you require.
+
+#+BEGIN_SRC clojure
+{:source-paths
+ ["src/main"
+  "src/test"]
+
+ :dependencies
+ [[org.clojure/core.async "0.4.474"]
+  [cljs-http "0.1.46"]
+  [re-frame "0.11.0-rc3"]
+  [reagent "0.9.0-rc3"
+   :exclusions [cljsjs/react
+                cljsjs/react-dom
+                cljsjs/react-dom-server
+                cljsjs/create-react-class]]]
+
+ :builds
+ {:app
+  {:target :react-native
+   :init-fn <project-name>.core/init
+   :output-dir "build" 
+   :devtools {:autoload true}}}} 
+#+END_SRC
+
+not to sure if all the exclusions are needed
+
+*** write some code in *src/main/project-name.core.cljs* *init*
+Like...
+#+BEGIN_SRC clojure
+(defn init []
+      (dispatch-sync [:initialize-db])
+      (.registerComponent app-registry "geocoder" #(r/reactify-component app-root)))
+#+END_SRC
+
+*** For development
+
+#+BEGIN_SRC 
+shadow-cljs watch app
+
+react-native start
+
+react-native run-android
+#+END_SRC
+
+*** Build apk
+
+#+BEGIN_SRC 
+shadow-cljs release app
+
+cd android
+./gradlew build
+#+END_SRC
+
+
