@@ -1,4 +1,4 @@
-#+Title Clojurescript + react native (Android)
+#+TITLE: Clojurescript + react native (Android)
 #+OPTIONS: toc:0
 
 * Clojurescript + react native (Android)
